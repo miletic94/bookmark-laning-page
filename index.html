@@ -28,11 +28,13 @@
     </li>
     <li>
       <button class="btn-ternary">
-        <a id="login" href="#" class="menu-link">Login</a> 
+        <a href="#" class="menu-link login">Login</a> 
       </button>
     </li>
   </menu>
-  <img class="hamburger" src="images/icon-hamburger.svg" alt="hamburger menu" />
+  <img class="hamburger" src="images/icon-hamburger.svg" alt="hamburger menu" 
+       onclick="openSidenav()"
+  />
 </nav>
  
 <main>
@@ -43,16 +45,18 @@
       A clean and simple interface to organize your favourite websites. Open a new 
       browser tab and see your sites load instantly. Try it for free.
     </p>
-    
-    <button class="btn-primary">
-      Get it on Chrome
-    </button>
-    <button class="btn-secondary">
-      Get it on Firefox
-    </button>
+    <div class="btn-group">
+      <button class="btn-primary">
+        Get it on Chrome
+      </button>
+      <button class="btn-secondary">
+        Get it on Firefox
+      </button>
+    </div>
+
   </div>
 
-  <div class="herobox">
+  <div class="herobox bg-right">
     <img src="images/illustration-hero.svg" alt="Illustration of a website in a browser" />
   </div>
 </main>
@@ -74,10 +78,10 @@
   </div>
 
   <main>
-    <div class="herobox">
+    <div class="herobox bg-left">
       <img src="images/illustration-features-tab-1.svg" alt="illustration features tab 1" />
     </div>
-    <div class="textbox">
+    <div class="textbox add-padding">
       <h2>
         Bookmark in one click
       </h2>
@@ -86,11 +90,13 @@
         Organize your bookmarks however you like. Our simple drag-and-drop interface 
         gives you complete control over how you manage your favourite sites.
       </p>
-      
-      <button class="btn-primary">
-        More Info
-      </button>
-    </div>
+      <div class="btn-group">
+        <button class="btn-primary">
+            More Info
+          </button>
+        </div>
+      </div>
+ 
   </main>
 
 </div>
@@ -277,34 +283,45 @@
 
     
   </footer>
+
   <nav id="side-nav">
-    <menu id="side-menu">
-      <img id="top" class="logo" src="images/logo-bookmark.svg" alt="Bookmark logo" />
-      <li>
-        <a href="#features" class="menu-link">
-          Features
-        </a>
-      </li>
-      <li>
-        <a href="#" class="menu-link">
-          Pricing
-        </a>
-      </li>
-      <li>
-        <a href="#" class="menu-link">
-          Contact
-        </a>
-      </li>
-      <li>
-        <button class="btn-ternary">
-          <a id="login" href="#">Login</a> 
-        </button>
-      </li>
-    </menu>
-    <div class="socials">
+
+    <div id="side-body">
+      <div id="side-header">
+        <img class="logo" src="images/logo-bookmark.svg" alt = "Bookmark logo" />
+        <img  src="images/icon-close.svg" alt="X - close the window" 
+              onclick="closeSidenav()"
+        />
+      </div>
+      <menu id="side-menu">
+        <li>
+          <a href="#features" class="menu-link">
+            Features
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-link">
+            Pricing
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-link">
+            Contact
+          </a>
+        </li>
+      </menu>
+      <button class="btn-ternary">
+        <a href="#" class="menu-link login">Login</a> 
+      </button>
+      
+    </div>
+
+    <div id="side-socials" class="socials">
       <img src="images/icon-facebook.svg" alt="facebook icon" />
       <img src="images/icon-twitter.svg" alt="twitter icon" />
     </div>
   </nav>
+
+  <script src="scripts/sidenav.js"></script>
 </body>
 </html>
