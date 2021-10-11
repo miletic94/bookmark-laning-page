@@ -53,36 +53,36 @@ table {
 /*==================================*/
 
 
-
-body > * {
-    display: none;
-}
-main, main *, #features {
-	display: block;
-}
-#features section, #features > div {
-	display: none;
-}
 /*==================================
 Table of Contents
 ====================================*/
 /*==================================
 
 1. Layout
+	1.0. General Layout
 	1.1. Navbars
-	1.2. Hero Sections (main)
-
+	1.2. Features 
+	1.3. Hero Sections (main)
+	1.4. Dowload Cards
+	1.5 FAQ
+	1.6. Hero Sections (main)
 2. Typography
 	2.0. General Typography
 	2.1. Navbar Typography 
-	2.2 Button Typography
+	2.2 Features Typography
+	2.3 FAQ Typography
+	2.4 Button Typography
 
 3. Navbar
 
 6. Mobile media screen
 	6.1 Layouts
 		6.1.1 SideNav
-		6.1.2. Hero Sections (main)
+		6.1.2. Features
+		6.1.3. Hero Sections (main)
+		6.1.4. Download Cards
+		6.1.5. FAQ
+		6.1.6. Footers 
 	6.2. Typography
 
 
@@ -90,6 +90,9 @@ Table of Contents
 
 /*==================================
 1. Layout
+====================================*/
+/*==================================
+1.0. General Layout
 ====================================*/
 body {
 	width: 100vw;
@@ -102,7 +105,16 @@ body {
 }
 a {
 	display: block;
+	text-decoration: none;
 }
+a:hover {
+	cursor: pointer;
+}
+section {
+	width: 37.5%;
+	text-align: center;
+}
+
 /*==================================
 1..1. Navbars
 ====================================*/
@@ -128,10 +140,34 @@ main {
 	width: 90%;
 	align-self: flex-end;
 }
-
 /*==================================
-1.2. Hero Sections (main)
+1.2. Features
 ====================================*/
+#features {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#features-nav {
+	/* background-color: rgba(73, 93, 207, 0.2); */
+	border-bottom: solid 1px rgba(73, 93, 207, 0.2);
+	;
+}
+#features-nav menu li {
+	margin: 0 4.5rem;
+	padding: 2.7rem 0;
+}
+#features-nav li.active {
+	border-bottom: solid 4px rgba(250, 89, 89, 1);
+	margin-bottom: -2px;
+}
+/*==================================
+1.3. Hero Sections (main)
+====================================*/
+#features main {
+	justify-content: unset;
+	align-self: flex-start;
+}
 main {
 	height: 487px; 
 }
@@ -185,14 +221,118 @@ main {
 .btn-group {
 	display: flex;
 }
+
+/*==================================
+1.4. Download Cards
+====================================*/
+#download {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.browser-cards {
+	width: 64%;
+	height: 451px; 
+	display: flex;
+	justify-content: space-between;
+}
+#bc1 {
+	align-self: flex-start;
+}
+#bc2 {
+	align-self: center;
+}
+#bc3 {
+	align-self: flex-end;
+}
+.browser-card {
+	width: 30%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow:hidden;
+	border-radius: 15px;
+	box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
+}
+.browser-icon {
+	margin-top: 4.9rem;
+	width: 100px;
+	height: 100px;
+}
+.action-group {
+	margin: 3.2rem 0;
+}
+.browser-card button {
+	padding: 1rem 1.7vw;
+	margin: 2.4rem 0;
+}	
 /* ========================== */
 
+/*==================================
+1.5. FAQ
+====================================*/
+#faq {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.qabox {
+	width: 37.5%;
+}
+details > summary {
+	list-style:none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+details[open] svg path {
+	stroke: red;
+}
+details[open] svg {
+	transform: rotate(180deg);
+}
+
+
+/*==================================
+1.6. Footers
+====================================*/
 footer {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+.footer-primary {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 30.6%;
+}
+.footer-primary h2 {
+	text-align: center;
+}
+form[name="contact-us"] {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+form[name="contact-us"] input {
+	padding-left: 2rem;
+	height: 4.8rem;
+	width: 68%;
+	border-radius: 10px;
+	border: none;
+}
+.footer-primary button {
+	width: 28%;
+
+}
+
 .footer-secondary {
 	padding: 2.1rem 0; /* change rem to vw */
 }
@@ -228,6 +368,17 @@ h2 {
 	font-weight: 500;
 	line-height: 5.2rem;
 }
+h3 {
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 2.4rem;
+	letter-spacing: 0.025rem;
+}
+small {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2.8rem;
+}
 p {
 	font-size: 1.8rem;
 	font-weight: 400;
@@ -245,7 +396,25 @@ p {
 	letter-spacing: 0.15rem;
 }
 /*==================================
-2.2. Button Typography 
+2.2. Features Typography 
+====================================*/
+#features-nav {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 1.7rem;
+	letter-spacing: 0.06rem;
+}
+/*==================================
+2.3. FAQ Typography 
+====================================*/
+summary {
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 3.2rem;
+}
+
+/*==================================
+2.4. Button Typography 
 ====================================*/
 button {
 	font-size: 1.4rem;
@@ -256,6 +425,26 @@ button {
 	letter-spacing: 0.025rem;
 }
 
+
+
+/*==================================
+2.6. Footer Typography
+====================================*/
+.overline {
+	font-size: 1.3rem;
+	font-weight: 500;
+	line-height: 4rem;
+	text-align: center;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+}
+form[name="contact-us"] input {
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 2.8rem;
+	letter-spacing: 0.025rem;
+	padding-left: 2rem;
+}
 /*==================================
 3. Navbar (Footer and Top Navbar)
 ====================================*/
@@ -301,6 +490,9 @@ button:hover {
 /*==================================
 6.1. Layout
 ====================================*/
+section {
+	width: 83%;
+}
 /*==================================
 6.1.1 SideNav 
 ====================================*/
@@ -373,7 +565,33 @@ button:hover {
 		margin: 1.2rem 0;
 	}
 /*==================================
-6.1.2. Hero Sections 
+6.1.2. Features 
+====================================*/
+#features-nav {
+	border-bottom: none;
+	width: 83%;
+
+}
+#features-nav menu {
+	display: flex;
+	flex-direction: column;
+}
+#features-nav menu li {
+	width: fit-content;
+	margin: 0;
+	text-align: center;
+}
+.menu-item {
+	width: 100%;
+	border-top: solid 1px rgba(73, 93, 207, 0.2);
+	display: flex;
+	justify-content: center;
+}
+.menu-item:last-child {
+	border-bottom: solid 1px rgba(73, 93, 207, 0.2);
+}
+/*==================================
+6.1.3. Hero Sections 
 ====================================*/
 	main {
 		flex-direction: column;
@@ -422,7 +640,49 @@ button:hover {
 	.bg-left {
 		align-self: flex-start;
 	}
-	
+/*==================================
+6.1.4 Download Cards
+====================================*/
+.browser-cards{
+	flex-direction: column;
+	height: unset;
+	align-items: center;
+}
+.browser-card {
+	width: 50%;
+	min-width: 280px;
+}
+small {
+	display: block;
+}
+.browser-card h3, .browser-card p, .browser-card small {
+	text-align: center;
+}
+#bc1, #bc2, #bc3 {
+	align-self: unset;
+}
+/*==================================
+6.1.5. FAQ 
+====================================*/	
+
+/*==================================
+6.1.6. Footers 
+====================================*/	
+footer {
+	align-self: center;
+}
+form[name="contact-us"] {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.footer-primary {
+	width: 100%;
+}
+.footer-primary button {
+	width: 80%;
+}
+
 /*==================================
 6.2. Typography 
 ====================================*/

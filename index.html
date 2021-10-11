@@ -71,10 +71,30 @@
     </p>
   </section>
   
-  <div class="subnav">
-    Simple Bookmarking
-    Speedy Searching
-    Easy Sharing
+  <div id="features-nav">
+    <menu>
+      <div class="menu-item">
+        <li class="active">
+          Simple Bookmarking
+        </li>
+      </div>
+      <div class="menu-item">
+        <li>
+          Speedy Searching
+        </li>
+      </div>
+      <div class="menu-item">
+        <li>
+          Speedy Searching
+        </li>
+      </div>
+      <div class="menu-item">
+        <li>
+          Easy Sharing
+        </li>
+      </div>
+    </menu>
+   
   </div>
 
   <main>
@@ -127,42 +147,54 @@
 
   <div id="download">
     <section>
-      <h2>>Download the extension</h2>
+      <h2>Download the extension</h2>
       <p>
         We’ve got more browsers in the pipeline. Please do let us know if you’ve 
         got a favourite you’d like us to prioritize.
       </p>
     </section>
-    
-    
-    <!--Browser card can be a component-->
-    <div class="browser-card">
-      <img src="images/logo-chrome.svg" alt="chrome logo"  />
-      <h3>Add to Chrome</h3>
-      <small>Minimum version 62</small>
-      <hr />
-      <button><a href="#">Add & Install Extension</a></button> <!--button a {width: 100%; height: 100%}???-->  
-    </div>
-    
-    <div class="browser-card">
-      <img src="images/logo-firefox.svg" alt="firefox logo"  />
-      <h3>Add to Firefox</h3>
-      <small>Minimum version 55</small>
-      <hr />
-      <button><a href="#">Add & Install Extension</a></button> <!--button a {width: 100%; height: 100%}???-->  
-    </div>
-    
-    <div class="browser-card">
-      <img src="images/logo-opera.svg" alt="opera logo"  />
-      <h3>Add to Opera</h3>
-      <small>Minimum version 46</small>
-      <hr />
-      <button><a href="#">Add & Install Extension</a></button> <!--button a {width: 100%; height: 100%}???-->  
-    </div>
-    
-  </div>
 
-  <div id="#faq">
+    <div id="border">
+      
+    </div>
+
+    <div class="browser-cards">
+      <!--Browser card can be a component-->
+      <div id="bc1" class="browser-card">
+        <img class="browser-icon" src="images/logo-chrome.svg" alt="chrome logo"  />
+        <div class="action-group">
+          <h3>Add to Chrome</h3>
+          <small>Minimum version 62</small>  
+        </div>
+        <img class="bg-dots" src="images/bg-dots.svg" />
+        <button><a href="#">Add & Install Extension</a></button> <!--button a {width: 100%; height: 100%}???-->  
+      </div>
+
+      <div id="bc2" class="browser-card">
+        <img class="browser-icon" src="images/logo-firefox.svg" alt="firefox logo"  />
+        <div class="action-group">
+          <h3>Add to Firefox</h3>
+          <small>Minimum version 55</small>
+        </div>
+        <img class="bg-dots" src="images/bg-dots.svg" />
+        <button><a href="#">Add & Install Extension</a></button> <!--button a {width: 100%; height: 100%}???-->  
+      </div>
+
+      <div id="bc3" class="browser-card">
+        <img class="browser-icon" src="images/logo-opera.svg" alt="opera logo"  />
+        <div class="action-group">
+          <h3>Add to Opera</h3>
+          <small>Minimum version 46</small>
+        </div>
+        <img class="bg-dots" src="images/bg-dots.svg" />
+        <button><a href="#">Add & Install Extension</a></button> <!--button a {width: 100%; height: 100%}???-->  
+      </div>
+
+      </div>
+    </div>
+   
+
+  <div id="faq">
     <section>
       <h2>
         Frequently Asked Questions
@@ -179,6 +211,7 @@
         <summary>
           <!-- Question 1 -->
           What is Bookmark?
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
         </summary>
         <p>
           <!-- Answer 1 -->
@@ -191,6 +224,7 @@
         <summary>
           <!-- Question 2 -->
           How can I request a new browser?
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
         </summary>
         <p>
           <!-- Answer 2 -->
@@ -205,6 +239,8 @@
         <summary>
           <!-- Question 3 -->
           Is there a mobile app?
+          <!-- <img src="images/icon-arrow.svg" alt="expnad arrow" /> -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
         </summary>
         <p>
           <!-- Answer 3 -->
@@ -218,6 +254,7 @@
         <summary>
           <!-- Question 4 -->
           What about other Chromium browsers?
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
         </summary>
         <p>
           <!-- Answer 4 -->
@@ -240,7 +277,7 @@
       <h2>
         Stay up-to-date with what we’re doing
       </h2>
-      <form>
+      <form name="contact-us">
         <input type="email" name="email" placeholder="Enter your email address" />
         <button class="btn-ternary">
           <a href="#">
